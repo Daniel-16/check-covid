@@ -2,11 +2,15 @@ import React, { useState } from "react";
 
 const LocationData = () => {
   const [search, setSearch] = useState("");
-  const [items, setItems] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState({
+    countryInfo: {},
+    cases: [],
+    deaths: [],
+    recovered: [],
+  });
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [error, setError] = useState(null);
-  const [results, setResults] = useState("");
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -18,10 +22,7 @@ const LocationData = () => {
       .then((res) => {
         console.log(res);
         setItems(res);
-        setIsLoaded(true);
-        // if (res.status === 404) {
-        //   setItems(res.message);
-        // }
+        // setIsLoaded(true);
       })
       .catch((error) => {
         console.error("Could not fetch data", error);
@@ -60,7 +61,15 @@ const LocationData = () => {
       </div>
       <p className="text-center">{searchValue !== "" && items.country}</p>
       <div className="flex-center m-2">
-        <img src={items.countryInfo.flag} width="30" height="20" alt="Flag" />
+        <img
+          style={
+            searchValue !== "" ? { display: "block" } : { display: "none" }
+          }
+          src={items.countryInfo.flag}
+          width="30"
+          height="20"
+          alt="Flag"
+        />
       </div>
       <div className="row">
         <div className="col-6">
@@ -68,7 +77,9 @@ const LocationData = () => {
             <div className="card-body">
               <h6 className="text-center">Total Deaths</h6>
               <h4 className="text-center">
-                {error ? "Error Loading Data" : items.deaths}
+                {error
+                  ? "Error Loading Data"
+                  : items.deaths.toLocaleString("en-US")}
               </h4>
             </div>
           </div>
@@ -78,7 +89,9 @@ const LocationData = () => {
             <div className="card-body">
               <h6 className="text-center">Total Recovered</h6>
               <h4 className="text-center">
-                {error ? "Error Loading Data" : items.recovered}
+                {error
+                  ? "Error Loading Data"
+                  : items.recovered.toLocaleString("en-US")}
               </h4>
             </div>
           </div>
@@ -90,7 +103,9 @@ const LocationData = () => {
             <div className="card-body">
               <h6 className="text-center">Total Confirmed</h6>
               <h4 className="text-center">
-                {error ? "Error Loading data" : items.cases}
+                {error
+                  ? "Error Loading data"
+                  : items.cases.toLocaleString("en-US")}
               </h4>
             </div>
           </div>

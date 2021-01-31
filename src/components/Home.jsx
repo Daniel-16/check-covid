@@ -3,11 +3,12 @@ import { MDBView, MDBMask } from "mdbreact";
 import logo from "../image/image.jpg";
 import CovidDataProvider from "./Data";
 import LocationData from "./LocationData";
-// import Search from "./Search";
+import Navbar from "./Navbar";
 
 const HomePage = () => {
   return (
     <div>
+      <Navbar />
       <MDBView>
         <img src={logo} className="img-fluid" alt="Laptop" />
         <MDBMask className="flex-center" overlay="black-strong">

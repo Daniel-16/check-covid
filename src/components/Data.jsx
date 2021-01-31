@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 const CovidDataProvider = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState({
+    deaths: {},
+    cases: {},
+    recovered: {},
+  });
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
