@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Main from "./Forms/Main";
+import assessment from "../image/assessment.png";
 
 const SelfAssessment = () => {
   const [display, setDisplay] = useState(true);
@@ -15,8 +16,16 @@ const SelfAssessment = () => {
       <Navbar />
       <div
         style={display ? { display: "block" } : { display: "none" }}
-        className="container mt-3"
+        className="container mt-5"
       >
+        <div className="flex-center mt-5">
+          <img
+            src={assessment}
+            className="img-fluid"
+            alt="Assessment"
+            style={{ width: "13rem", height: "13rem" }}
+          />
+        </div>
         <h1 className="text-center">Self Assessment</h1>
         <p className="text-center">
           The purpose of the self assessment is to help you make decisions about

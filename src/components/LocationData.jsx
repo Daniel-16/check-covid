@@ -76,7 +76,7 @@ const LocationData = () => {
           <div className="card bg-danger h-100 white-text">
             <div className="card-body">
               <h6 className="text-center">Total Deaths</h6>
-              <h4 className="text-center">
+              <h4 className="text-center h4-responsive">
                 {error
                   ? "Error Loading Data"
                   : items.deaths.toLocaleString("en-US")}
@@ -88,7 +88,7 @@ const LocationData = () => {
           <div className="card bg-success h-100 white-text">
             <div className="card-body">
               <h6 className="text-center">Total Recovered</h6>
-              <h4 className="text-center">
+              <h4 className="text-center h4-responsive">
                 {error
                   ? "Error Loading Data"
                   : items.recovered.toLocaleString("en-US")}
@@ -102,7 +102,7 @@ const LocationData = () => {
           <div className="card bg-warning h-100">
             <div className="card-body">
               <h6 className="text-center">Total Confirmed</h6>
-              <h4 className="text-center">
+              <h4 className="text-center h4-responsive">
                 {error
                   ? "Error Loading data"
                   : items.cases.toLocaleString("en-US")}

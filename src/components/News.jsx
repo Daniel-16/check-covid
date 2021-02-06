@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import NewsPosts from "./NewsPosts";
 import Pagination from "./Pagination";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+import errorImage from "../image/errorImage.png";
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
@@ -11,9 +13,7 @@ const NewsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(
-      `https://newsapi.org/v2/everything?q=covid&apiKey=af6ea2fbc2e0458bb5c21426bf030ce2`
-    )
+    fetch(`https://saurav.tech/NewsAPI/top-headlines/category/health/us.json`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -39,10 +39,18 @@ const NewsPage = () => {
       <div>
         <Navbar />
         <div className="flex-center m-5">
-          <h1 className="text-center mt-5 h1-responsive">
-            Oops! It seems like there was an error while loading the data
-          </h1>
+          <img
+            src={errorImage}
+            alt="error_loading_data"
+            className="img-fluid"
+            style={{ width: "25rem", height: "20rem" }}
+          />
         </div>
+        <h1 className="text-center mt-5 h1-responsive">
+          Oops! It seems like there was an error while loading the data.
+          <br />
+          Check your internet connection and try again.
+        </h1>
       </div>
     );
   } else if (!loading) {
@@ -59,9 +67,10 @@ const NewsPage = () => {
       <div>
         <Navbar />
         <div className="container">
-          <h2 className="text-center">
-            Welcome to the news section for my website called Check Covid
-          </h2>
+          <h3 className="text-center mt-2 h3-responsive">
+            Latest News related to the Coronavirus/Health related topics.
+          </h3>
+          <hr />
           <NewsPosts news={currentPosts} />
           <Pagination
             newsPerPage={newsPerPage}
@@ -69,6 +78,7 @@ const NewsPage = () => {
             paginate={paginate}
           />
         </div>
+        <Footer />
       </div>
     );
   }
