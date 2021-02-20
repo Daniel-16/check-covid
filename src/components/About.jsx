@@ -28,12 +28,11 @@ const About = () => {
                   <span className="fa fa-phone"></span>
                 </h2>
                 <p className="card-text">
-                  To contact me, you can reach me out through my phone number
-                  through the link below
+                  To contact me, you can reach me out on my phone{" "}
+                  <a href="tel:+2349077234932" className="card-link">
+                    here
+                  </a>
                 </p>
-                <a href="tel:+2349077234932" className="card-link">
-                  09077234932
-                </a>
               </div>
             </div>
           </div>
