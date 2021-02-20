@@ -6,6 +6,7 @@ import NewsPage from "./News";
 import SelfAssessment from "./SelfAssessment";
 import ContactUs from "./Contact";
 import About from "./About";
+import Countries from "./Countries";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/selfassessment" component={SelfAssessment} />
             <Route path="/contact" component={ContactUs} />
             <Route path="/about" component={About} />
+            <Route path="/countries" component={Countries} />
           </Switch>
         </div>
       </Router>

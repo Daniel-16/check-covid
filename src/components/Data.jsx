@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Details from "./moreDetails";
 
 const CovidDataProvider = () => {
   const [items, setItems] = useState({
@@ -138,6 +139,7 @@ const CovidDataProvider = () => {
             </div>
           </div>
         </div>
+        <Details />
       </div>
     );
   }

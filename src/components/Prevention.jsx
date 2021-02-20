@@ -62,12 +62,11 @@ class Prevention extends Component {
         </MDBNav>
         <MDBTabContent activeItem={this.state.activeItem}>
           <MDBTabPane tabId="1" role="tabpanel">
-            <p>
+            <p className="mt-2">
               COVID-19 affects different people in different ways. Most infected
               people will develop mild to moderate illness and recover without
               hospitalization
             </p>
-            <hr />
             <ul>
               <span className="mt-2">Most common symptoms:</span>
               <li>fever</li>

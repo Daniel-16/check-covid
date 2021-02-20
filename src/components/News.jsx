@@ -76,6 +76,7 @@ const NewsPage = () => {
             newsPerPage={newsPerPage}
             totalNews={news.length}
             paginate={paginate}
+            currentPage={currentPage}
           />
         </div>
         <Footer />

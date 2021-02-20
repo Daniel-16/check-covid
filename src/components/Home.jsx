@@ -26,7 +26,7 @@ const HomePage = () => {
         </MDBMask>
       </MDBView> */}
       <div className="jumbotron lighten-5 blue-grey z-depth-0">
-        <h3>What is Coronavirus</h3>
+        <h3>What is Coronavirus?</h3>
         <p>
           Coronaviruses are a large family of viruses that are known to cause
           illnesses ranging from the common cold to more severe diseasese such
