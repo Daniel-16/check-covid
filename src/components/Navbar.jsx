@@ -30,53 +30,58 @@ const Navbar = () => {
         <MDBNavbarToggler onClick={toggle} />
         <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
           <MDBNavbarNav right>
-            <li
-              className="nav-item m-2"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              <Link to="/" className="text-dark">
+            <li className="nav-item m-2">
+              <Link
+                to="/"
+                className="text-dark"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 Home
               </Link>
             </li>
-            <li
-              className="nav-item m-2"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              <Link to="/news" className="text-dark">
+            <li className="nav-item m-2">
+              <Link
+                to="/news"
+                className="text-dark"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 News
               </Link>
             </li>
-            <li
-              className="nav-item m-2"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              <Link to="/selfassessment" className="text-dark">
+            <li className="nav-item m-2">
+              <Link
+                to="/selfassessment"
+                className="text-dark"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 Self Assessment
               </Link>
             </li>
-            <li
-              className="nav-item m-2"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              <Link to="/contact" className="text-dark">
+            <li className="nav-item m-2">
+              <Link
+                to="/contact"
+                className="text-dark"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 Contact
               </Link>
             </li>
-            <li
-              className="nav-item m-2"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-            >
-              <Link to="/about" className="text-dark">
+            <li className="nav-item m-2">
+              <Link
+                to="/about"
+                className="text-dark"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 About
               </Link>
             </li>
