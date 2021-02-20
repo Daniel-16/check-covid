@@ -110,7 +110,7 @@ const CovidDataProvider = () => {
             <div className="card bg-danger h-100 white-text">
               <div className="card-body">
                 <h6 className="text-center">Total Deaths</h6>
-                <p className="card-text text-center">
+                <p className="card-text text-center text-white">
                   {items.deaths.toLocaleString("en-US")}
                 </p>
               </div>
@@ -120,7 +120,7 @@ const CovidDataProvider = () => {
             <div className="card bg-success h-100 white-text">
               <div className="card-body">
                 <h6 className="text-center">Total Recovered</h6>
-                <p className="card-text text-center">
+                <p className="card-text text-center text-white">
                   {items.recovered.toLocaleString("en-US")}
                 </p>
               </div>
@@ -132,7 +132,7 @@ const CovidDataProvider = () => {
             <div className="card bg-warning h-100">
               <div className="card-body">
                 <h6 className="text-center">Total Confirmed</h6>
-                <p className="card-text text-center">
+                <p className="card-text text-center text-dark">
                   {items.cases.toLocaleString("en-US")}
                 </p>
               </div>
